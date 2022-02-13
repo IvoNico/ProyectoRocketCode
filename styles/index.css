@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;              /*estilo de las letras*/
+}
+body {
+    margin: 0;
+    background-color: #f9f9ff; 
+}
+/*MENÚ*/
+.navbar__sections {
+    background-color: #97C1A9;
+    width: 100%;                                     /*tamaño*/
+    color: white;
+    height: 64px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);  /*tamaño y color del borde*/
+    box-sizing: border-box;
+    padding: 10px 0;
+    position: fixed;                                 /*mantiene siempre visible la parte seleccionada*/
+    margin-bottom: 50px;
+}
+.navbar__sections-container {
+    max-width: 1024px;                               /*tamaño de la caja*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 43px;
+}
+.navbar__logo {
+    width: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+.navbar__sections .navbar__logo-text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    width: 30px;
+    text-align: left;
+}
+.navbar__menu {
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.navbar__menu-list{
+    list-style: none;     /*elimina los puntos de las listas*/
+    display: flex;
+    margin: 10px;
+}
+.navbar__menu-link {
+    color: white;
+    text-decoration: none;  /*elimina el subrayado*/
+    margin-right: 15px;     /*distancia entre cada link*/
+}
+.navbar__menu-icon {
+    width: 16px;
+    margin-right: 10px;
+}
+/*selecciones avanzados*/
+.navbar__menu span:nth-child(even) {   /*modifica los impares*/       
+    color: white;     
+}                                     
+.navbar__menu span:nth-child(odd) {    /*modifica los pares*/
+    color: white;
+}                                     
+.navbar__menu span:first-child {       /*modifica los primeros*/
+    color: white;
+}                                     
+.navbar__menu span:last-child {        /*modifica los ultimos*/
+    color: white;
+}
+
+ /*SECCIONES*/
+.sections-banners {
+    
+    background-image: url();          /*imagen-fondo en el banner*/
+    background-color: #000000;
+    text-align: center;
+    height: 100vh;                    /*utiliza el alto que tenga el dispositivo que se este usando*/
+    min-height: 700px;                /*es el minimo que puede soportar*/
+    justify-content: space-between;
+
+}
+.sections-banners__list{
+    display: flex;
+    list-style: none;                      /*elimina los puntos o subrayados de los items*/
+    text-decoration: none;
+    text-align: center;
+    justify-content:space-between;        /*espacio entre los items*/
+}
+.sections-banners__modicon{
+    width: 100%;
+}
+.sections-banners__modific {
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.sections-banners__image {
+    display: none;
+    width: 108px;
+    margin-bottom: 40px;
+    margin-top: 150px;
+}
+.sections-banners__title {
+    width: 100%;
+    color: white;
+    font-size: 60px;                   /*tamaño de las letras*/  
+    margin: 0 auto;
+    
+}
+.sections-banners__profesion {
+    color: white;
+    font-size: 24px;
+}
+.sections-banners__item-icon {
+    width: 24px;
+    margin-left: 10px;
+}
+.sections-banners-modific{
+    padding-top: 250px;              /*modifica espacios entre cajas y su contenido*/;
+}
+
+.button-primary {
+background-color: #97C1A9;
+justify-content: center;
+text-decoration: none;
+align-items: center;
+border-radius: 21px;                     /*bordes redondeados*/
+font-size: 16px;
+color: white;
+width: max-content;
+min-width: 160px;
+display: flex;
+height: 42px;
+outline: none;
+margin: 0 auto;
+cursor: pointer;
+}
+
+/*SCROLL*/
+.sections-banners__scroll{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    bottom: 32px;
+    align-items: center;                 /*centrar elementos*/
+    text-decoration: none;
+    position: absolute;
+    transition: bottom 0.2s ease;       /*velicidad a la que cambia de tamaño el elemento asignado*/
+    }
+    .sections-banners__scroll:hover {          /*hover se utiliza para modificar un elemento al colocar el mause arriba*/
+        bottom: 40px;
+    }
+.sections-banners__scroll span {
+color: white;
+margin-bottom: 20px;
+}
+.sections-banners__scroll-icon {
+    width: 16px;
+    margin: 0 auto;                   /*centrar los elementos*/
+}
+/*CARD*/
+.card {
+    box-shadow: 0px 5px 20px 0px rgba(69,67,96,0.1) ;       /*sombra y sensacion de profundidad a los elementos*/
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+}
+
+/*ABOUT ME*/
+.sections-about-me {
+    padding: 60px 0;
+ }
+.sections-about-me__avatar {
+    width: 150px;
+}
+
+.sections-about-me__container, .sections-experiences__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.sections-about-me__card, .sections-experiences__card {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;                  /*posicionar elementos uno al lado del otro*/
+ }
+
+ .sections-about-me__card-info {
+    width: 50%;
+}
+
+.sections-about-me__card-switches {
+    width: 50%;
+}
+.sections-about-me__skill-bar{
+    margin:10px 0px 15px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    height: 8px;
+}
+.sections-about-me__skill-bar-html{
+    width: 80%;
+    height: 8px;
+    background-color: #6c6ce5;
+    border-radius: 16px;
+}
+.sections-about-me__skill-bar-css{
+    background-color: #ffd15c;
+    width: 90%;
+    height: 8px;
+    border-radius: 16px;
+
+}
+.sections-about-me__skill-bar-cm{
+    background-color: #ff4c60;
+    width: 95%;
+    height: 8px;
+    border-radius: 16px;
+}
+.sections-subtitle{
+max-width: 1024px;
+margin: 0 auto;
+display:flex;
+flex-direction: row;
+height: 37.6px;
+font-size: 32px;
+color: #343353;
+margin-bottom: 40px;
+}
+/*SERVICIOS*/
+.sections-service__container, .sections-experiences__container, .sections-my-work__container{
+    display: flex;
+    flex-direction: row;
+}
+.sections-services{
+    display: flex;
+    flex-direction: row;
+    margin-right: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+    }
+.sections-services__card {
+    margin-right: 16px;                  /*separar elementos*/
+    text-align: center;                 /*centrar textos-imagenes*/
+    margin-bottom: 40px;                /*separa las cajas de las siguiente*/
+}
+.section-services__card:last-child, .section-experiences__card:last-child, .section-my-work__card:last-child {
+    margin-right: 0;
+}
+.sections-services__card-html{
+    box-shadow: 0px 5px 20px 0px #6c6ce5;
+    background-color: #6c6ce5;
+    color: white;
+}
+.sections-services__card-css{
+    box-shadow: 0px 5px 20px 0px #ffd15c;
+    background-color: #ffd15c;
+}
+.sections-services__card-cm{
+    box-shadow: 0px 5px 20px 0px #ff4c60;
+    background-color: #ff4c60;
+    color: white;
+}
+.sections-services__card-image{
+    height: 80px;
+}
+/*EXPERIENCES*/
+.sections-experiences__icon{
+    height: 20px;
+}
+.sections-experiences__card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.sections-experiences__card-content{ 
+    border-left: 1px solid #ff4c60;
+    position: relative;
+    padding: 0 0 64px 32px;              /*separar elementos*/
+}
+/*MIS TRABAJOS*/
+.sections-my-work__container{
+    margin-bottom: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+.sections-my-work__card{
+    width: 330px;
+    height: 204px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    position:relative;
+}
+.sections-my-work__mask {
+    background: #6c6ce5;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    color: white;
+}
+.sections-my-work__card:hover .sections-my-work__mask {
+    opacity: 0.9;
+}
+.sections-my-work__title {
+    font-size: 32px;
+    font-weight: bold;
+}
+.sections-my-work__icon{
+    width: 100%;
+    max-height: 140px;           /*maxima altura*/
+}
+/*FOOTER*/
+footer {
+    background-color: #f9f9ff;
+    max-width: 1024px;
+    margin: 0 auto 200px;
+}
+
+.footer-contact__container,.footer__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-contac__info {
+    width: 30%;
+}
+
+.footer-contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact__form-container {
+    width: 70%;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.footer-contact__form-container .button-primary {
+    margin: 0;
+}
+
+.footer-contact__form-atributes-group {
+    display: flex;
+}
+
+.form-input {
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+    border-radius: 24px;
+    margin-bottom: 30px;
+    padding: 24px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+@media screen and (max-width: 1024px){
+    .navbar__menu-icon {
+        display: none;
+    }
+    .navbar__menu {
+        font-size: 14px;
+    }
+    .navbar__menu-list-item:last-of-type {
+        display: none;
+    }
+    .section-about-me__container, .section-servicess__container, .section-experiences__container, .section-my-work__container, .footer-contact__container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-about-me__avatar-container {
+        margin: 25px auto 15px;
+    }
+    .section-about-me__card {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-about-me__card-info .button-primary {
+        margin: 0 auto;
+    }
+    .section-about-me__card-info {
+        margin: 0 0 40px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .section-about-me__card-skills {
+        margin: 0 0 20px;
+        width: 100%;
+    }
+    .section-services__card, .section-experiences__card, .section-my-work__card {
+        margin-bottom: 40px;
+    }
+    .footer-contact__info {
+        width: 100%;
+        margin-bottom: 20px;
+}
+}
